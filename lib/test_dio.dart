@@ -4,13 +4,18 @@ import 'package:my_project/provider/dio_provider.dart';
 
 class PostsScreen extends ConsumerWidget {
   const PostsScreen({super.key});
+
+  void _onButtonPressed(int c) {
+    print(c + c);
+  }
+
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final postsAsyncValue = ref.watch(postsProvider);
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Posts'),
+        title: const Text('Post'),
         backgroundColor: Colors.amber,
       ),
       body: postsAsyncValue.when(
@@ -56,13 +61,14 @@ class PostsScreen extends ConsumerWidget {
         loading: () => const Center(child: CircularProgressIndicator()),
         error: (error, stack) => Center(child: Text('Error: $error')),
       ),
-      // floatingActionButton: FloatingActionButton(
-      //   onPressed: () {
-      //     print(postsAsyncValue);
-      //   },
-      //   backgroundColor: Colors.amber,
-      //   child: const Text("Click"),
-      // ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          // Call the function with parameters inside the closure
+          _onButtonPressed(42);
+        },
+        backgroundColor: Colors.amber,
+        child: const Text("Click"),
+      ),
     );
   }
 }
