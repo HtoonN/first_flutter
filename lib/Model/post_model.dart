@@ -22,6 +22,4 @@ class Post {
       userId: json['userId'] as int,
     );
   }
-
-  // Method to convert a Post to JSON
 }

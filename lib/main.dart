@@ -1,46 +1,24 @@
 // import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:my_project/b_navigation_bar.dart';
 import 'package:my_project/id_card.dart';
 import 'package:my_project/router.dart';
 // void main() {
 //   runApp(const MaterialApp(home: QuoState()));
 // }
 import 'package:flutter/material.dart';
+import 'package:my_project/snackbar.dart';
 import 'package:my_project/test.dart';
 import 'package:my_project/test_dio.dart';
+import 'package:my_project/text_textfield.dart';
+import 'package:my_project/todo_list.dart';
 
 void main() {
-  runApp(ProviderScope(child: MaterialApp(home: PostsScreen())));
+  runApp(const ProviderScope(child: MaterialApp(home: TodoList())));
 }
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
-
-  // Step 3: Define GoRouter configuration
-  // final GoRouter _router = GoRouter(
-  //   routes: [
-  //     GoRoute(
-  //       path: '/',
-  //       name: 'home',
-  //       builder: (context, state) => const Test(),
-  //     ),
-  //     GoRoute(
-  //       path: '/quotes',
-  //       name: 'details',
-  //       builder: (context, state) {
-  //         // final id = state.pathParameters['id']!; // Using null assertion
-  //         return const QuoState();
-  //       },
-  //     ),
-  //     GoRoute(
-  //       path: '/drawer',
-  //       name: 'drawer',
-  //       builder: (context, state) {
-  //         return const DrawerW();
-  //       },
-  //     ),
-  //   ],
-  // );
 
   @override
   Widget build(BuildContext context) {

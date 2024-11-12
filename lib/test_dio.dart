@@ -61,14 +61,14 @@ class PostsScreen extends ConsumerWidget {
         loading: () => const Center(child: CircularProgressIndicator()),
         error: (error, stack) => Center(child: Text('Error: $error')),
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          // Call the function with parameters inside the closure
-          _onButtonPressed(42);
-        },
-        backgroundColor: Colors.amber,
-        child: const Text("Click"),
-      ),
+      // floatingActionButton: FloatingActionButton(
+      //   onPressed: () {
+      //     // Call the function with parameters inside the closure
+      //     _onButtonPressed(42);
+      //   },
+      //   backgroundColor: Colors.amber,
+      //   child: const Text("Click"),
+      // ),
     );
   }
 }
