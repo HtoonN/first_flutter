@@ -15,7 +15,6 @@ class Post {
 
   // Factory constructor to create a Post from JSON
   factory Post.fromJson(Map<String, dynamic> json) {
-    print(json);
     return Post(
       id: json['id'] as int,
       title: json['title'] as String,
@@ -25,12 +24,4 @@ class Post {
   }
 
   // Method to convert a Post to JSON
-  Map<String, dynamic> toJson() {
-    return {
-      'id': id,
-      'title': title,
-      'body': body,
-      'userId': userId,
-    };
-  }
 }
